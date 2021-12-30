@@ -43,6 +43,11 @@ git checkout 主分支
 git merge 要合并进来的分支名
 //解决冲突：直接修改文本，然后add，然后不带文件名地commit
 
+//pull=fetch+merge
+git fetch origin master  //仅抓取查看，不改变本地文件
+git merge origin/master
+git pull origin master    //fetch+merge
+
 
 //SSH
 rm -r .ssh

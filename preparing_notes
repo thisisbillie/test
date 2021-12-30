@@ -52,3 +52,7 @@ ls
 cat id_rsa.pub
 //copy and paste the whole thing to your gitHub
 
+//clone
+
+git clone [ssh link]
+

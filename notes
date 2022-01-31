@@ -4,6 +4,8 @@ git config --global user.name ""
 git config --global user.email ""
 //保存位置 ~/.gitconfig
 
+git config --global --unset user.name
+
 //project scope signature
 git config user.name ""
 git config user.email ""

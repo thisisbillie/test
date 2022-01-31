@@ -127,67 +127,67 @@ touch test.txt  (create)
 git add
 git commit
 cat test.txt
-Nano test.txt
+Nano test.txt  
 
-练习几次 add 和 commit  然后休息5分钟
+练习几次 add 和 commit  然后休息5分钟  
 #### check differnence
-nano test.txt      'check difference'
-mkdir test-directory
-git diff
+nano test.txt      'check difference'    
+mkdir test-directory  
+git diff  
 
-The dit diff command shows the changes we have made before a commit. 
-Line 1 tells us Git is comparing “a” and “b” versions of the index.md file
-Line 2 indicates which tracked versions “a” and “b” correspond to; “aed0629” and “989787e” are unique computer-generated identifiers for each version
-The last two lines show the changes to the “index.md” between the compared versions: 
-there were no changes to the.... line
-a line was added with the text ... (“+” indicates an addition and “-“, a deletion)
-We can now add and commit the updated version of “index.md”:
+The dit diff command shows the changes we have made before a commit.   
+Line 1 tells us Git is comparing “a” and “b” versions of the index.md file  
+Line 2 indicates which tracked versions “a” and “b” correspond to; “aed0629” and “989787e” are unique computer-generated identifiers for each version  
+The last two lines show the changes to the “index.md” between the compared versions:   
+there were no changes to the.... line  
+a line was added with the text ... (“+” indicates an addition and “-“, a deletion)  
+We can now add and commit the updated version of “index.md”:  
 
 #### check log
-git log
-git log --pretty=oneline
-git log --oneline
-git reflog
+git log  
+git log --pretty=oneline  
+git log --oneline  
+git reflog  
 
-git log lists information about all commits in reverse chronological order, including the commit messages we wrote to describe them. It is important to add meaningful commit messages, especially when working on teams. Best practice is to write commit messages in the imperative (e.g. ‘Add index.md’ instead of ‘Adding index.md’).
+git log lists information about all commits in reverse chronological order, including the commit messages we wrote to describe them. It is important to add meaningful commit messages, especially when working on teams. Best practice is to write commit messages in the imperative (e.g. ‘Add index.md’ instead of ‘Adding index.md’).  
 
 #### back and forth
-git reset --hard ae90djke
-git reset --hard HEAD^
-git reset --hard HEAD~n
-//hard: resets the index file and git repository 暂存区+本地库
-//mixed: resets the index file not git repository 暂存区
-//soft: do not touch the index file or working tree 工作区
+git reset --hard ae90djke  
+git reset --hard HEAD^  
+git reset --hard HEAD~n  
+//hard: resets the index file and git repository 暂存区+本地库  
+//mixed: resets the index file not git repository 暂存区  
+//soft: do not touch the index file or working tree 工作区  
 
-git reset --mixed dkdh39
-git reset --hard HEAD   //use this to sync the git repository with the index file
+git reset --mixed dkdh39  
+git reset --hard HEAD   //use this to sync the git repository with the index file  
 
 ### syncing with GitHub
-create repository
+create repository  
 create 
-$ cd ~
-$ ssh-keygen –t rsa –C [your GitHub email]
-$ cd .ssh
-$ ls
-$ cat id_rsa.pub
-$ (copy and paste to GitHub)
+$ cd ~  
+$ ssh-keygen –t rsa –C [your GitHub email]  
+$ cd .ssh  
+$ ls  
+$ cat id_rsa.pub  
+$ (copy and paste to GitHub)  
 
-rm -rvf .ssh
+rm -rvf .ssh  
 
-For every action that you perform, SSH removes the burden of authenticating on your remote server for every action (clone/push/pull) in git. This is one of the major reasons why SSH prefers to HTTPS. ... SSH seems to be more secure than HTTPS as it does not use password-based authentication.
+For every action that you perform, SSH removes the burden of authenticating on your remote server for every action (clone/push/pull) in git. This is one of the major reasons why SSH prefers to HTTPS. ... SSH seems to be more secure than HTTPS as it does not use password-based authentication.  
 
-git push origin master
+git push origin master  
 
-git remote rm origin
+git remote rm origin  
 
 #### pull
-When working with others or on multiple computers we need a way to pull all the remote changes back into our local repository. We can see how this works by adding a file to our GitHub repository, then “pulling” that change back to our computer.
+When working with others or on multiple computers we need a way to pull all the remote changes back into our local repository. We can see how this works by adding a file to our GitHub repository, then “pulling” that change back to our computer.  
 
-Near the bottom of the “hello-world” repository on GitHub there is a button to “Add a README” file to your repository. Click the button, enter some text, then scroll to the bottom and click “Commit new file” (The default commit message will be “Create README.md”, which is fine for our purposes).
+Near the bottom of the “hello-world” repository on GitHub there is a button to “Add a README” file to your repository. Click the button, enter some text, then scroll to the bottom and click “Commit new file” (The default commit message will be “Create README.md”, which is fine for our purposes).  
 
-It is good practice to add a README file briefly describing what the project is about. If the README is in the root directory GitHub will automatically display it like a cover page for your repository.
-After adding a README on GitHub your local repository is out-of-sync with the remote repository. Let’s fix that by pulling the remote changes into local repository with git pull.
-git pull origin master
+It is good practice to add a README file briefly describing what the project is about. If the README is in the root directory GitHub will automatically display it like a cover page for your repository.  
+After adding a README on GitHub your local repository is out-of-sync with the remote repository. Let’s fix that by pulling the remote changes into local repository with git pull.  
+git pull origin master  
 
 
 

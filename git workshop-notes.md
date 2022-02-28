@@ -164,18 +164,17 @@ git reset --mixed dkdh39
 git reset --hard HEAD   //use this to sync the git repository with the index file  
 
 ### syncing with GitHub
-create repository  
-create 
-$ cd ~  
+
+#### create SSH
 $ ssh-keygen –t rsa –C [your GitHub email]  
-$ cd .ssh  
-$ ls  
-$ cat id_rsa.pub  
+$ cat ~/.ssh/id_rsa.pub  
 $ (copy and paste to GitHub)  
 
 rm -rvf .ssh  
 
 For every action that you perform, SSH removes the burden of authenticating on your remote server for every action (clone/push/pull) in git. This is one of the major reasons why SSH prefers to HTTPS. ... SSH seems to be more secure than HTTPS as it does not use password-based authentication.  
+
+#### create new remote repository
 
 git push origin master  
 
